@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color: #2c3e50;
+    padding: 10px 20px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: #bdc3c7;
+    border-top: 2px solid #ecf0f1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+    align-items: center;
+}
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 30px;
+   
+    border-radius: 8px;
+    
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    align-items: center;
+    padding-left: 180px;
+   
+}
+
+.button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-list {
+   list-style: none;
+   padding: 0;
+   max-width: 600;
+   margin: auto;
+}
+
+.task-item {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2d502c;
+}
+
+.title {
+    
+    color: #2c3e50;
+    margin-bottom: 5px;
+    padding-left: 220px;
+}
+
+.task-description{
+    color: #7f8c8d;
+    
+}
+
+.delete-item {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #d02b0e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.update-item {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #29b929;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteAll {
+      margin: 10px;
+    padding: 8px 12px;
+    background-color: #370adb;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

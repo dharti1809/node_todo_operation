@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('taskNavbar') %>
+
+    <div class="container">
+        <h1 class="title">Task List</h1>
+        <form action="/multi-delete" method="POST">
+            <button type="submit" class="deleteAll">Delete Selected Tasks</button>
+            <ul class="task-list">
+                <% for(let i = 0; i < result.length; i++){ %>
+                    <li class="task-item">
+                    
+                        <div class="task-title">
+                            <h2><%= result[i].title %></h2>
+                        </div>
+                        <div class="task-description">
+                            <p><%= result[i].description %></p>
+                        </div>
+                        <input type="checkbox" class="task-checkbox" name="selectedTask" value="<%= result[i]._id%>">
+
+                        <a href="/delete/<%= result[i]._id %>" class="delete-item"> Delete</a>
+
+                        <a href="/update/<%= result[i]._id %>" class="update-item"> Update</a>
+                    </li>
+                    
+                <% } %>
+            
+            </ul>
+        </form>
+    </div>
+    
+</body>
+</html>

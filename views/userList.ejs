@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="/register" class="btn btn-primary m-3">Add New User</a>
+  
+    <h2 class="text-center">User Details</h2>
+    <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Date Of Birth</th>
+        <th>Address</th>
+        <th>Profile Photo</th>
+        <th>Hobbies</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach((user, index) => { 
+       
+        %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= user.fullname %></td>
+          <td><%= user.email %></td>
+          
+          <td><%= user.mobile_no %></td>
+          <td><%= user.gender %></td>
+          <td><%= user.dob %></td>
+          <td> <%= user.address %> </td>
+          <td>
+            <img src="/img/<%= user.profile_photo %>" width="50"  height="40" alt="your image" class='profile'>
+          </td>
+          <td><%= user.hobbies %></td>
+          <td>
+            <a href="/delete/<%= user._id %>" class="btn btn-danger btn-sm">Delete</a>
+            <a href="/update/<%= user._id %>" class="btn btn-primary btn-sm">Update</a>
+          </td>
+        </tr>
+      <%  }) %>
+    </tbody>
+</table>
+</body>
+</html>
